@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+ section {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #413f3f75;
+    max-width: 400px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+#imagem {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 10px;
+}
+button {
+    border: none;
+    padding: 0;
+}
+.bts {
+width: 35px;
+box-shadow: 1px 1px 5px black;
+}
+.bts:hover {
+width: 35px;
+box-shadow: 0px 0px 0px black;
+}
