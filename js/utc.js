@@ -1,6 +1,19 @@
 
 var utc = 0
 
+function mais() {
+    utc ++
+    if (utc > 11) {
+        utc = -12
+    }
+}
+function menos() {
+    utc --
+    if(utc < -12) {
+        utc = 11
+    }
+}
+
 setInterval(show, 1000);
 
 function show() {
@@ -14,10 +27,12 @@ var gmt = document.getElementById('gmt')
 if (horaUtc + utc > 23) {
  var exibeHora = `${horaUtc+utc-24}:${minUtc}:${segsUtc}`
 }
+else if (horaUtc + utc < 0) {
+ var exibeHora = `${24+(horaUtc+utc)}:${minUtc}:${segsUtc}`
+}
 else {
     var exibeHora = `${horaUtc+utc}:${minUtc}:${segsUtc}`
 }
-
 
 switch (utc) {
     case -12:
@@ -92,37 +107,5 @@ switch (utc) {
     case 11:
     gmt.innerHTML = `UTC  +11 Micronésia ${exibeHora}`
     break
-    case 12:
-    gmt.innerHTML = `UTC  +12 Tuvalu ${exibeHora}`
-    break
-    case 13:
-    gmt.innerHTML = `UTC  +13 Samoa ${exibeHora}`
-    break
-    case 14:
-    gmt.innerHTML = `UTC  +14 Kiribati ${exibeHora}`
-    break
 }
-}
-
-function mais() {
-
-    utc ++
-    
-    if (utc > 14) {
-        utc = -12
-    }
-
-    console.log(utc)
-}
-
-function menos() {
-    
-    utc --
-    
-    if(utc < -12) {
-        utc = 14
-    }
-    
-    console.log(utc)
-
 }
