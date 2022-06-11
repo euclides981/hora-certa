@@ -24,14 +24,26 @@ var minUtc = data.getUTCMinutes()
 var segsUtc = data.getUTCSeconds()
 var gmt = document.getElementById('gmt')
 
-if (horaUtc + utc > 23) {
- var exibeHora = `${horaUtc+utc-24}:${minUtc}:${segsUtc}`
+var fuso = horaUtc + utc
+
+if (fuso < 10) {
+    fuso = `0${fuso}`
 }
-else if (horaUtc + utc < 0) {
- var exibeHora = `${24+(horaUtc+utc)}:${minUtc}:${segsUtc}`
+if (minUtc < 10) {
+    minUtc = `0${minUtc}`
+}
+if (segsUtc < 10) {
+    segsUtc = `0${segsUtc}`
+}
+
+if (fuso > 23) {
+    var exibeHora = `${fuso-24}:${minUtc}:${segsUtc}`
+}
+else if (fuso < 0) {
+    exibeHora = `${24+fuso}:${minUtc}:${segsUtc}`
 }
 else {
-    var exibeHora = `${horaUtc+utc}:${minUtc}:${segsUtc}`
+    exibeHora = `${fuso}:${minUtc}:${segsUtc}`
 }
 
 switch (utc) {
