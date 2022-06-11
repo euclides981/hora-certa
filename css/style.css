@@ -3,7 +3,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
-#mapam {
+#mapa {
     width: 100%;
 }
 button {
@@ -12,12 +12,8 @@ button {
 }
 .bts {
 width: 25px;
-box-shadow: 1px 1px 2px black;
+box-shadow: 0.5px 0.5px 0.5px black;
 }
 .bts:hover {
     box-shadow: 0px 0px 0px black;
-}
-#divbts {
-margin-right: 15px;
-
 }

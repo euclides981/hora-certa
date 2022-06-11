@@ -114,7 +114,7 @@ switch (utc) {
     gmt.innerHTML = `UTC  +9 Tóquio ${exibeHora}`
     break
     case 10:
-    gmt.innerHTML = `UTC  +10 Papua New Guinea ${exibeHora}`
+    gmt.innerHTML = `UTC  +10 Nova Guiné ${exibeHora}`
     break
     case 11:
     gmt.innerHTML = `UTC  +11 Micronésia ${exibeHora}`
