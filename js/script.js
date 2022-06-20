@@ -18,4 +18,5 @@ function showTime() {
     }
 
     msg.innerHTML = `Hora Local: ${hora}:${min}:${segs}`
+
 }
