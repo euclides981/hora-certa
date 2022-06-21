@@ -3,6 +3,11 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
+#nav {
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+}
 #mapa {
     width: 100%;
 }
@@ -22,9 +27,18 @@ box-shadow: 0.5px 0.5px 0.5px black;
 }
 .cidades {
     display: flex;
+    flex-wrap: wrap;
     margin: 50px 0 50px 0;
+    padding: 0 20px 0 20px;
     justify-content: space-around;
     gap: 20px;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;  
+    cursor: none;
 }
 .cidade {
     display: grid;
@@ -35,4 +49,6 @@ box-shadow: 0.5px 0.5px 0.5px black;
     border-radius: 5px;
     width: 100px;
     padding: 10px;
+
+
 }
